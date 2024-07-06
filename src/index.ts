@@ -27,6 +27,7 @@ export default {
     io.on("connection", function (socket) {
       socket.on("join_room", (data: { username: string; room: string }) => {
         const { username, room } = data;
+        console.log(username)
         socket.join(room);
         let __createdtime__ = Date.now();
 
