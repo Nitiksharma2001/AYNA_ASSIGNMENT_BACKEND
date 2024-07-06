@@ -20,7 +20,7 @@ export default {
     const io = new Server(strapi.server.httpServer, {
       cors: {
         // cors setup
-        origin: "http://localhost:5173",
+        origin: process.env.FRONTEND_URL,
         methods: ["GET", "POST"],
       },
     });
